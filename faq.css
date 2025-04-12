@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+/********** Fonts **********/
+
+* {
+  font-family: "Work Sans", sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+  color: hsl(292, 16%, 49%);
+}
+/********** FAQ **********/
+
+body {
+  margin: 0;
+  background-color: hsl(275, 100%, 97%);
+}
+
+.background-img {
+  background-image: url(images/background-pattern-mobile.svg);
+  background-position: center;
+  height: 280px;
+}
+
+.faq-container {
+  background-color: white;
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  top: -100px;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.question-button {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+button:hover {
+  color: hsl(292, 16%, 49%);
+}
+
+/********** Active/Hidden States for JavaScript **********/
+
+.hide {
+  display: none;
+}
+
+.minus {
+  display: none;
+}
+
+.minus-show {
+  display: flex;
+}
+
+.text {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.text-show {
+  visibility: visible;
+  height: fit-content;
+  opacity: 1;
+}
+
+/********** Media Query **********/
+
+@media (min-width: 600px) {
+  .faq-container {
+    max-width: 600px;
+  }
+
+  .background-img {
+    background-image: url(images/background-pattern-desktop.svg);
+  }
+}
